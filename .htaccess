@@ -1,0 +1,12 @@
+Options -MultiViews +FollowSymLinks
+DirectoryIndex index.php
+
+RewriteEngine On
+
+# Nếu request là file hoặc thư mục thật thì không rewrite
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Tất cả route còn lại đều đi qua index.php để PHP router xử lý
+RewriteRule ^ index.php [L,QSA]

@@ -1,0 +1,31 @@
+# Node.js artifacts (Đã chuyển sang PHP)
+node_modules/
+package-lock.json
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# SQLite Databases
+*.sqlite
+*.sqlite3
+*.db
+database/*.sqlite
+database/*.sqlite-journal
+database/*.sqlite3
+
+# Uploads (giữ cấu trúc thư mục với .gitkeep)
+uploads/*
+!uploads/.gitkeep
+!uploads/assets/
+public/uploads/*
+!public/uploads/.gitkeep
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
